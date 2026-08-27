@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-ui), ui-sans-serif, system-ui, sans-serif;
+  --color-brand: #2563eb;
+  --color-brand-hover: #1d4ed8;
+  --color-brand-soft: #dbeafe;
+  --color-page: #f8fafc;
+  --color-ink: #0f172a;
+  --color-danger: #dc2626;
+  --color-danger-soft: #fee2e2;
+}
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --surface: #ffffff;
+  --surface-muted: #f1f5f9;
+  --border: #e2e8f0;
+  --muted: #64748b;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --accent: #dbeafe;
+  --header-h: calc(3.5rem + env(safe-area-inset-top, 0px));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  background: var(--background);
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  overflow-x: clip;
+  background:
+    radial-gradient(ellipse at top left, rgba(37, 99, 235, 0.08), transparent 32rem),
+    radial-gradient(ellipse at bottom right, rgba(14, 165, 233, 0.08), transparent 28rem),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.03em;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: #bfdbfe;
+  color: #1e40af;
+}
+
+@keyframes transcript-focus {
+  0%,
+  100% {
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.28);
+  }
+  50% {
+    box-shadow: 0 0 0 7px rgba(37, 99, 235, 0.12);
+  }
+}
+
+.transcript-focus {
+  animation: transcript-focus 1.1s ease-in-out 2;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

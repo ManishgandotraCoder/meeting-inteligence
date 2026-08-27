@@ -1,0 +1,11 @@
+[00:00:12] Sarah:
+We need to release the payments feature next Friday.
+
+[00:00:21] John:
+I can finish the API work by Wednesday.
+
+[00:00:34] Sarah:
+Great. John will own the API implementation.
+
+[00:01:02] Mike:
+The main risk is the Stripe migration.
