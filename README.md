@@ -39,15 +39,16 @@ npm run dev
 
 Postgres is on **5433**, not 5432, so it does not fight a Homebrew/Postgres install. If Conda `(base)` is active, do not run bare `python` / `uvicorn` — they miss `asyncpg`. Use `.venv/bin/python`.
 
-Transcript format (sample: `backend/tests/fixtures/sample_meeting.txt`):
+Transcripts are any `.txt` meeting file: labelled turns, chat exports, Zoom-style lines, or loose notes. Known layouts parse instantly. Everything else is read by `llama3.1` into speaker turns (samples: `backend/tests/fixtures/sample_meeting.txt`, `backend/tests/fixtures/project_discussion_chat.txt`).
 
 ```text
 [00:00:12] Sarah:
 We need to release the payments feature next Friday.
 
-[00:00:21] John:
-I can finish the API work by Wednesday.
+Sarah: John will own the API.
 ```
+
+Speaker roles after an em dash are stripped (`Maya Patel — Project Manager` → Maya Patel). Times like `[9:30 AM]` become `09:30:00`. Missing times are filled in order.
 
 Upload that from **New meeting**, or switch to **Voice** to record / attach audio (Whisper runs locally). Wait until status is ready, then ask “What decisions were made?”
 
@@ -146,7 +147,7 @@ I treated this as a **meeting** problem, not a generic PDF chatbot. People say �
 
 **Custom UI, not shadcn.** I needed a small set of components and full control over the transcript/chat layout. `tech.md` still says shadcn from an earlier plan; I did not go back and install it.
 
-**Strict parser.** Supporting Zoom/Meet/VTT would have been a weekend of format archaeology. I documented the format in the upload UI instead.
+**Parser then model.** Known layouts (`[HH:MM:SS] Name:`, chat-style `[9:30 AM] Name — Role`, `Name: …`) parse in code. Unknown `.txt` is converted to turns by `llama3.1`. That is slower and can mis-attribute a speaker; I still would not spend a weekend on Zoom/VTT archaeology for an MVP.
 
 **No auth.** Out of scope for a local single-user demo. I still scoped retrieval by meeting so the RAG path is shaped like a multi-tenant query.
 
@@ -216,7 +217,7 @@ If I had another week, in this order:
 **Edge cases I did not handle**
 
 - Voice turns labelled `Speaker` (no named diarization)
-- Anything that is not `[HH:MM:SS] Name:`
+- Zoom / Meet / VTT as first-class parsers (free-form `.txt` is read by the model when the layout is unknown)
 - Overlapping speakers, `[inaudible]`, speaker `Unknown`
 - Transcripts bigger than 5 MB / 400k chars
 - Multi-user access control

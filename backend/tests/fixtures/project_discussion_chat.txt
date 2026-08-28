@@ -1,0 +1,86 @@
+PROJECT DISCUSSION & PLANNING
+Nova Website Redesign
+Tuesday, 27 August
+
+PARTICIPANTS
+
+Maya Patel — Project Manager
+Profile photo: Woman in a navy blazer, smiling
+
+Daniel Kim — UI/UX Designer
+Profile photo: Man wearing glasses, creative studio background
+
+Sofia Martinez — Developer
+Profile photo: Woman wearing headphones at her workstation
+
+Marcus Johnson — Marketing Lead
+Profile photo: Man in a grey shirt, office background
+
+------------------------------------------------------------
+CONVERSATION
+------------------------------------------------------------
+
+[9:30 AM] Maya Patel — Project Manager
+Good morning, everyone! Let’s finalize the project plan today. Our goal is to launch the redesigned website by 30 September.
+
+[9:32 AM] Daniel Kim — UI/UX Designer
+Morning! I’ve completed the initial wireframes for the homepage, services page, and contact page. I’ll share the first design draft by Thursday.
+
+[9:34 AM] Sofia Martinez — Developer
+Great. Once the designs are approved, I’ll start building the responsive layouts. I’ll also prepare the development environment today.
+
+[9:36 AM] Marcus Johnson — Marketing Lead
+I’m working on the page content, keywords, and calls to action. I can deliver the first content draft by Friday afternoon.
+
+[9:38 AM] Maya Patel — Project Manager
+Here’s the proposed timeline:
+
+- 27–29 August: Wireframes and content outline
+- 30 August–5 September: Visual design and content writing
+- 6–18 September: Development
+- 19–24 September: Testing and revisions
+- 25–29 September: Final review and launch preparation
+- 30 September: Website launch
+
+[9:41 AM] Daniel Kim — UI/UX Designer
+That timeline works for me. I’ll need the final brand colors, logo files, and image library before starting the high-fidelity designs.
+
+[9:43 AM] Marcus Johnson — Marketing Lead
+I have the latest brand materials. I’ll upload everything to the shared project folder before noon.
+
+[9:45 AM] Sofia Martinez — Developer
+One question: are we including the blog and newsletter signup in the first release?
+
+[9:47 AM] Maya Patel — Project Manager
+Let’s include the newsletter signup, but move the blog to phase two. That will help us stay on schedule.
+
+[9:48 AM] Sofia Martinez — Developer
+Sounds good. I’ll include the signup form and connect it to the email platform.
+
+[9:50 AM] Marcus Johnson — Marketing Lead
+I’ll prepare the confirmation message and welcome email copy.
+
+[9:52 AM] Daniel Kim — UI/UX Designer
+I’ll add the newsletter section to the homepage design. I’ll also create mobile versions of every screen.
+
+[9:55 AM] Maya Patel — Project Manager
+Task owners:
+
+- Maya: Project coordination, approvals, and progress tracking
+- Daniel: Wireframes, visual designs, and mobile layouts
+- Sofia: Development, integrations, and technical testing
+- Marcus: Website content, SEO, and brand assets
+
+Please post a short progress update by 4:00 PM each Friday. Our next planning meeting is Monday at 10:00 AM.
+
+[9:57 AM] Daniel Kim — UI/UX Designer
+Confirmed.
+
+[9:57 AM] Sofia Martinez — Developer
+Works for me!
+
+[9:58 AM] Marcus Johnson — Marketing Lead
+All clear. I’ll share the assets shortly.
+
+[10:00 AM] Maya Patel — Project Manager
+Thanks, everyone! We have a solid plan. Let’s get started.

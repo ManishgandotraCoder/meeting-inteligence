@@ -14,8 +14,9 @@ export default function NewMeetingPage() {
           Add a meeting
         </h1>
         <p className="mt-1.5 text-sm leading-6 text-gray-500">
-          Upload a labelled .txt transcript, or record / attach audio. Smart Meet
-          parses it, indexes it for retrieval, and extracts key insights.
+          Upload any .txt meeting notes, chat export, or labelled transcript,
+          or record / attach audio. Smart Meet reads the format, indexes it,
+          and extracts key insights.
         </p>
       </div>
 

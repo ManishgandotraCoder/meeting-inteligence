@@ -13,6 +13,7 @@ from app.core.logging import logger
 from app.core.tokens import estimate_tokens
 from app.llm.prompts import PROMPT_VERSION
 from app.schemas.insights import MeetingAnalysisOutput, RagAnswerOutput
+from app.schemas.transcript import TranscriptParseOutput
 
 T = TypeVar("T", bound=BaseModel)
 
@@ -53,6 +54,11 @@ class LLMClient:
 
     async def rewrite(self, system_prompt: str, user_prompt: str) -> RewriteOutput:
         return await self._parse(system_prompt, user_prompt, RewriteOutput)
+
+    async def extract_transcript(
+        self, system_prompt: str, user_prompt: str
+    ) -> TranscriptParseOutput:
+        return await self._parse(system_prompt, user_prompt, TranscriptParseOutput)
 
     async def _parse(self, system_prompt: str, user_prompt: str, schema: type[T]) -> T:
         json_schema = schema.model_json_schema()

@@ -42,7 +42,9 @@ http://localhost:8000/docs
 ## Processing flow
 
 1. Validate `.txt` transcript or audio (wav/mp3/m4a/webm)
-2. Transcribe audio locally with Whisper, then parse timestamps and speakers
+2. Transcribe audio locally with Whisper, then parse timestamps and speakers.
+   Known layouts (`[HH:MM:SS] Name:`, `[9:30 AM] Name — Role`, `Name: …`) parse in code.
+   Anything else is converted to turns by the chat model.
 3. Save transcript segments
 4. Build speaker-aware chunks (400–600 tokens, overlap, never split a turn)
 5. Embed chunks with the configured `EMBEDDING_MODEL`

@@ -270,13 +270,18 @@ export function UploadForm() {
           </div>
         ) : (
           <div className="mt-5 rounded-xl bg-page p-4">
-            <p className="text-xs font-medium text-gray-700">Expected format</p>
+            <p className="text-xs font-medium text-gray-700">Any text format</p>
+            <p className="mt-1 text-xs leading-5 text-gray-500">
+              Labelled transcripts, chat exports, Zoom-style dumps, or loose
+              meeting notes. If the layout is unfamiliar, the model reads it.
+              Titles and participant lists are skipped.
+            </p>
             <pre className="mt-2 overflow-x-auto text-xs leading-5 text-gray-500">
 {`[00:00:12] Sarah:
-We need to release the payments feature next Friday.
+We need to release next Friday.
 
-[00:00:21] John:
-I can finish the API work by Wednesday.`}
+Sarah: John will own the API.
+John: Agreed.`}
             </pre>
           </div>
         )}
